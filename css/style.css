@@ -3,7 +3,8 @@
 /* start variables */
 :root{
     --main-color:#fdb921;
-    --text-color: #d3a130
+    --text-color: #d3a130;
+    --transition-duration: 0.4s;
 }
 /* global rules */
 *{
@@ -43,3 +44,109 @@ ul{
     }
 }
 /* end global rules */
+/* start navbar */
+nav{
+    background-color: #fafafa;
+    position: relative;
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100px;
+    /* position: relative; */
+}
+nav .logo p{
+    font-size:35px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+nav .toggle-menu{
+    font-size:22px
+}
+@media (min-width: 991px) {
+    nav .toggle-menu{
+        display: none;
+    }
+}
+nav form{
+    display: flex;
+    width: 320px;
+    max-width:100%;
+}
+nav form input[type="text"]{
+    padding: 8px 60px 8px 20px;
+    font-family: sans-serif;
+    margin-right: 0;
+    caret-color: var(--main-color);
+    border: 1px solid #eee;
+    border-right: none;
+    border-radius:3px;
+    width: calc(100% -35px)
+}
+nav form button{
+    padding: 8px;
+    background-color: var(--main-color);
+    border-left: none;
+    width: 35px;
+    border: 1px solid var(--text-color)
+}
+nav form button i{
+    color: white;
+}
+@media (max-width: 992px) {
+    nav form,
+    nav ul{
+        display: none;
+    }
+    nav form input[type="text"]{
+        padding-right: 30px;
+    }
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 30px;
+}
+nav ul li:first-child a{
+    text-decoration: none;
+    color: var(--main-color);
+    transition: var(--transition-duration)
+}
+nav ul li:first-child a:hover{
+    color: var(--text-color);
+}
+nav ul li:last-child a{
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: var(--transition-duration)
+}
+nav ul li:last-child a:hover{
+    background-color: var(--text-color);
+}
+@media (max-width: 992px) {
+    nav ul li{display: block;margin-bottom: 40px;}
+    nav ul li:first-child a{
+        background-color: var(--main-color);
+        color:white;
+        padding: 15px 20px;
+        border-radius: 3px;
+        margin: 20px;
+    }
+   
+}
+.menu{
+    display: block;  
+    width: 100%;
+    background-color: #fafafa;
+    margin: 15px;
+}
+/* start header */
+header {
+    
+}
