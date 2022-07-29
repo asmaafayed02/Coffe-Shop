@@ -148,5 +148,17 @@ nav ul li:last-child a:hover{
 }
 /* start header */
 header {
-    
+    min-height: calc(100vh - 100px);
+    background-color: #fafafa;
+    background-image:url(../images/background.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+header .header-content h1{
+    margin-top: 0;
+    color: var(--text-color);
+    font-size:70px;
+    padding: 40px;
+    line-height: 1.2;
 }
