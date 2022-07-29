@@ -1,0 +1,45 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&family=Open+Sans:wght@800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+/* start variables */
+:root{
+    --main-color:#fdb921;
+    --text-color: #d3a130
+}
+/* global rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left:auto;
+    margin-right:auto;
+}
+/* small  */
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+/* medium */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+/* large */
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/* end global rules */
