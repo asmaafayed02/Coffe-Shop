@@ -5,6 +5,7 @@
     --main-color:#fdb921;
     --text-color: #d3a130;
     --transition-duration: 0.4s;
+    --section-padding: 60px;
 }
 /* global rules */
 *{
@@ -162,3 +163,111 @@ header .header-content h1{
     padding: 40px;
     line-height: 1.2;
 }
+@media (max-width: 768px) {
+    header .header-content h1{
+        font-size: 35px;
+        padding: 30px;
+        text-align: center;
+    }
+}
+/* start coffee-maker secion */
+.coffee-maker{
+    padding-top: calc(var(--section-padding) + 40px);
+    padding-bottom:calc(var(--section-padding) + 40px);
+}
+.coffee-maker .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+    align-items: center;
+}
+.coffee-maker .coffee-img{
+    position: relative;
+    width: 425px;
+    height: 509px;
+}
+.coffee-maker .coffee-img::before{
+    content:'';
+    position: absolute;
+    background-color:var(--main-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 0;
+    z-index: -1;
+}
+.coffee-maker .coffee-img::after{
+    content:'';
+    position: absolute;
+    top: -30px;
+    right: -50px;
+    background-color: #ee8d35;
+    width: 100px;
+    height: 130px;
+    z-index:-1;
+
+}
+.coffee-maker .coffee-img img{
+    max-width: 100%;
+    margin-left: 30px;
+    
+}
+@media (max-width: 776px) {
+    .coffee-maker .coffee-img {
+        width: 300px;
+        height: 400px;
+    }
+    .coffee-maker .coffee-img::before,
+    .coffee-maker .coffee-img::after{
+        display: none;
+    }
+    .coffee-maker .coffee-img img{
+        margin-left: 10px;
+        
+    }
+}
+.coffee-maker .coffee-text{
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    text-transform: capitalize;
+}
+.coffee-maker .coffee-text::before{
+    content:'';
+    position: absolute;
+    width: 15%;
+    height: 5px;
+    left:30%;
+    background-color: #ee8d35;
+}
+.coffee-maker .coffee-text::after{
+    content:'';
+    position: absolute;
+    height: 8px;
+    width: 70%;
+    left:30%;
+    background-color: #ee8d35;
+}
+
+.coffee-maker .coffee-text h2{
+    font-size: 40px;
+    line-height:1.4;
+    
+}
+@media (max-width: 991px) {
+    .coffee-maker .coffee-text{
+        text-align: left;
+        width: 50%;
+        
+    }
+    .coffee-maker .coffee-text::before{
+        left: 0;
+    }
+    .coffee-maker .coffee-text::after{
+        width: 100%;
+        left: 0;
+    }
+    .coffee-maker .coffee-text h2{
+        font-size: 30px;
+    }
+}
+/*  */
