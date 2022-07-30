@@ -347,3 +347,11 @@ header .header-content h1{
     border: 1px solid var(--text-color);
     color: white;
 }
+
+/* start footer */
+footer{
+    text-align: center;
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px;
+}
