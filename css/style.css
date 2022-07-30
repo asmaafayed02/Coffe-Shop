@@ -150,8 +150,8 @@ nav ul li:last-child a:hover{
 /* start header */
 header {
     min-height: calc(100vh - 100px);
-    background-color: #fafafa;
-    background-image:url(../images/background.png);
+    background-color: #202124;
+    background-image:url(../images/background.webp);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -206,7 +206,7 @@ header .header-content h1{
     z-index:-1;
 
 }
-.coffee-maker .coffee-img img{
+.coffee-maker .coffee-img img {
     max-width: 100%;
     margin-left: 30px;
     
@@ -287,7 +287,13 @@ header .header-content h1{
 .coffee-product .coffee-cards{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
-    gap: 20px;
+    gap: 40px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .coffee-product .coffee-cards .card{
+        margin: auto;
+    }
 }
 .coffee-product .coffee-cards .card img{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -305,7 +311,8 @@ header .header-content h1{
     font-size:22px
 }
 .coffee-product .coffee-cards .card .card-detail p:last-of-type{
-    color: #eaeaea;
+    color: #c5cccd;
+    text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.3);
 }
 .coffee-product .coffee-cards .card .card-detail p:last-of-type span{
     color: black;
@@ -321,14 +328,16 @@ header .header-content h1{
 }
 .join-us .join-header{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 .join-us form{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 60px;
+    max-width: 100%;
 }
 .join-us form input[type="email"]{
     padding: 15px 70px 15px 20px;
@@ -338,7 +347,14 @@ header .header-content h1{
     background-color: #f9f9f9;
     border-right: none;
     border-radius:3px;
-    width: 50%
+    width: 50%;
+}
+@media (max-width: 767px) {
+    .join-us form input[type="email"]{
+        font-size:12px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
 }
 .join-us form button{
     padding: 15px;
@@ -354,4 +370,5 @@ footer{
     background-color: var(--main-color);
     color: white;
     padding: 5px;
+    max-width: 100%;
 }
