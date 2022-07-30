@@ -314,3 +314,36 @@ header .header-content h1{
     color: var(--main-color);
 
 }
+/* start join-us section */
+.join-us{
+    padding-top: var(--section-padding);
+    padding-bottom:calc(var(--section-padding) + 40px);
+}
+.join-us .join-header{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.join-us form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.join-us form input[type="email"]{
+    padding: 15px 70px 15px 20px;
+    margin-right: 0;
+    caret-color: var(--main-color);
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+    border-right: none;
+    border-radius:3px;
+    width: 50%
+}
+.join-us form button{
+    padding: 15px;
+    background-color: var(--main-color);
+    border-left: none;
+    border: 1px solid var(--text-color);
+    color: white;
+}
